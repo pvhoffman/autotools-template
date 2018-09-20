@@ -1,6 +1,6 @@
 # GNU Autotools Starter Project Template
 
-A simple starter template for a C++ project using [GNU autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html )to create a build system and [Catch2](https://github.com/catchorg/Catch2) for unit testing.
+A simple starter template for a C++ project using [GNU autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html )to create a build system and [Catch2](https://github.com/catchorg/Catch2) for unit testing. The hope for this template is to simplify the process of creating a build system for with autotools (autoconf, automake, etc.). 
 
 ## Getting Started
 
