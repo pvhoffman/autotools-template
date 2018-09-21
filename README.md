@@ -24,7 +24,3 @@ Follow the step below to start a project from this template:
 8.  To run unit tests execute `make check`.
 9.  Remove the .git directory and create a new repository with `git init`, `git add .`, etc.
 
-## Known issues
-- **configure** script complains about AX_CXX_STDCXX macro or parameters: Ensure the ax_cxx_compile_stdcxx.m4 file exists in the /usr/local/aclocal ,or /usr/share/aclocal, directory.  This file can be obtained from [here](http://git.savannah.gnu.org/gitweb/?p=autoconf-archive.git;a=blob_plain;f=m4/ax_cxx_compile_stdcxx.m4) and can be manually copied to /usr/local/aclocal, or /usr/share/aclocal, if required.  After copying this file you'll need to execute `autoreconf --force` in the project directory to generate a new configure script.
-
-

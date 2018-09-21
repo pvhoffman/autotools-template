@@ -1,4 +1,4 @@
-AC_INIT([project_name], [1.0], [pvhoffman@protonmail.com])
+AC_INIT([${project_name}], [1.0], [])
 AM_INIT_AUTOMAKE([foreign -Wall -Werror])
 AC_PROG_CC
 AC_PROG_CXX
