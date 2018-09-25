@@ -1,5 +1,5 @@
-TESTS = project_name_tests
+TESTS = ${project_name}_tests
 
-check_PROGRAMS = project_name_tests
-project_name_tests_SOURCES = main.cc
+check_PROGRAMS = ${project_name}_tests
+${project_name}_tests_SOURCES = main.cc
 

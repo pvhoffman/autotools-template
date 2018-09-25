@@ -38,15 +38,17 @@ if [ "$projectpath" != "" ]; then
         exit 1
     fi
     if [ "$projectname" != "" ]; then
-        sed -Ei 's,$${project_name},${projectname},g' "$projectpath/configure.ac"
+        sed -i 's|${project_name}|'"${projectname}"'|g' "$projectpath/configure.ac"
+        sed -i 's|${project_name}|'"${projectname}"'|g' "$projectpath/src/Makefile.am"
+        sed -i 's|${project_name}|'"${projectname}"'|g' "$projectpath/test/Makefile.am"
+        AUTORECONF="$(which autoreconf)"
+        if test -z "$AUTORECONF"
+        then
+            echo "*** Error: cannot find autoreconf"
+            exit 1
+        fi
+        cd "$projectpath" && "$AUTORECONF" --force --install --verbose -I m4 || exit $?
     fi
 fi
 
-AUTORECONF="$(which autoreconf)"
-if test -z "$AUTORECONF"
-then
-    echo "*** Error: cannot find autoreconf"
-    exit 1
-fi
 
-"$AUTORECONF" --force --install --verbose -I m4 || exit $?
